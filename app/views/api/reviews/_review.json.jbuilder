@@ -1,0 +1,1 @@
+json.extract! review, :title, :body, :rebooking, :rating, :created_at

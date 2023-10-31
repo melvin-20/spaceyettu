@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: Peerspace_development
+  username: postgres
+  password: traviscott
+
+test:
+  <<: *default
+  database: Peerspace_test
+  username: postgres
+  password: traviscott
+
+production:
+  <<: *default
+  database: Peerspace_production
+  username: postgres
+  password: traviscott
+
